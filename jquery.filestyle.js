@@ -1,5 +1,4 @@
-/*
- * Style File - jQuery plugin for styling file input elements
+tyle File - jQuery plugin for styling file input elements
  *  
  * Copyright (c) 2007-2009 Mika Tuupola
  *
