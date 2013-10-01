@@ -16,11 +16,8 @@
                 
         /* TODO: This should not override CSS. */
         var settings = {
-            width : 250,
             buttonText: 'Choose File',
             buttonClass: "fileButton",
-            width: 88,
-            height: 28,
             tabIndex: false
         };
                 
@@ -52,12 +49,9 @@
             } else {
                 button.text(settings.buttonText).css({
                                 "display": "inline",
-                                "position": "absolute",
+                                "position": "relative",
                                 "overflow": "hidden",
-                                "width": settings.width + 'px',
-                                "height": settings.height + 'px',
                                 "text-align": "center",
-                                "line-height": settings.height + 'px'
                 });
             }
 
@@ -80,8 +74,8 @@
                         "position": "absolute",
                         "top": 0,
                         "left": 0,
-                        "height": settings.height + "px",
-                        "width": settings.width + "px",
+                        "height": "100%",
+                        "width": "100%",
                         "display": "inline",
                         "cursor": "pointer",
                         "opacity": "0.0"
