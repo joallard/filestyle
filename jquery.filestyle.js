@@ -87,15 +87,6 @@
                         "opacity": "0.0"
                     });
 
-            if ($.browser.mozilla) {
-                if (/Win/.test(navigator.platform)) {
-                    $(self).css("margin-left", "-142px");                    
-                } else {
-                    $(self).css("margin-left", "-168px");                    
-                };
-            } else {
-                $(self).css("margin-left", settings.imagewidth - settings.width + "px");                
-            };
 
             $(self).bind("change", function() {
             	v = $(self).val();
