@@ -50,7 +50,6 @@
                                 "overflow": "hidden"
                             });
             } else {
-                                "display": "inline",
                 button.text(buttonText).css({
                                 "position": "relative",
                                 "overflow": "hidden",
