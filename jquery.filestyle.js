@@ -32,10 +32,13 @@
             input = $(this);
             
             var outerWrapper = $("<div>").addClass('filestyle');
-            
+            var buttonClass = input.data('button-class') || settings.buttonClass;
+            var buttonText = input.data('button-text') || settings.buttonText;
+
             var button = $("<div>").css({
             	"position": "relative"
-            }).addClass(settings.buttonClass);
+            }).addClass(buttonClass);
+
             if (settings.image) {
             	button.css({
                                 "width": settings.width + "px",
@@ -47,8 +50,8 @@
                                 "overflow": "hidden"
                             });
             } else {
-                button.text(settings.buttonText).css({
                                 "display": "inline",
+                button.text(buttonText).css({
                                 "position": "relative",
                                 "overflow": "hidden",
                                 "text-align": "center",
