@@ -18,7 +18,8 @@
         var settings = {
             buttonText: 'Choose File',
             buttonClass: "fileButton",
-            tabIndex: false
+            tabIndex: false,
+            fileSelected: function(filename){}
         };
                 
         if(options) {
@@ -83,12 +84,13 @@
                         "opacity": "0.0"
                     });
 
-
             $(self).bind("change", function() {
             	v = $(self).val();
             	if (v.indexOf('C:\\fakepath\\') == 0)
             		v = v.substring(12);
                 filename.val(v);
+
+                settings.fileSelected(v);
             });
       
         });
