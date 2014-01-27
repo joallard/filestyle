@@ -1,6 +1,6 @@
 Filestyle
 =========
-**Filestyle** is a lightweight plugin to make file upload styling easy.
+**Filestyle** is a lightweight jQuery plugin to make file upload styling easy.
 
 Usage
 -----
