@@ -36,6 +36,15 @@ You can also activate it manually via Javascript:
 $("input[type=file]").filestyle()
 ```
 
+Data attributes
+---------------
+You can set text and class individually with *data* attributes put on the file field:
+
+* `data-button-class`: Button class
+* `data-button-text`: Button text
+
+These will have priority over the options passed to `$.fn.filestyle()`.
+
 
 Options
 -------
@@ -54,14 +63,6 @@ Options
 
 [tabindex]: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes#tabindex
 
-Data attributes
----------------
-You can also set things individually with *data* attributes put on the file field:
-
-* `data-button-class`: Button class
-* `data-button-text`: Button text
-
-These will have priority over the options passed to `$.fn.filestyle()`.
 
 Authors and Licence
 -------------------
