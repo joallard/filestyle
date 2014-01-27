@@ -2,6 +2,8 @@ Filestyle
 =========
 **Filestyle** is a lightweight jQuery plugin to make file upload styling easy.
 
+It allows you to use a text button or an image for your file field.
+
 Usage
 -----
 Mark your file upload field with the `filestyle` class:
