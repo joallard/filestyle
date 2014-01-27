@@ -4,10 +4,10 @@ Filestyle
 
 Usage
 -----
-Insert your file upload field as you normally would:
+Mark your file upload field with the `filestyle` class:
 
 ```html
-<input type="file" id="user_image" />
+<input type="file" class="filestyle" id="user_image" />
 ```
 
 Include `jquery.filestyle.js` as a script (depends on jQuery):
@@ -16,20 +16,33 @@ Include `jquery.filestyle.js` as a script (depends on jQuery):
 <script src="/js/jquery.filestyle.js"></script>
 ```
 
-Activate it on the fields you want to style:
+And the plugin auto-magically activates to give you a styleable field!
+
+```html
+<div class="filestyle container">
+  <input class="file filestyle file-name" readonly="" tabindex="999" />
+  <div class="file-button">
+    Choose a file
+    <input type="file" id="user_image" class="filestyle" />
+  </div>
+</div>
+```
+
+### Manual activation (without class)
+
+You can also activate it manually via Javascript:
 
 ```js
 $("input[type=file]").filestyle()
 ```
 
-And there you go.
 
 Options
 -------
-* `buttonText` (default: `"Choose File"`): 
+* `buttonText` (default: `"Choose File"`):
     The text you want the button to display.
 
-* `buttonClass` (default: `'fileButton'`):
+* `buttonClass` (default: `'file-button'`):
     The class of the button with the text.
 
 * `tabIndex` (default: `false`):
@@ -54,7 +67,7 @@ Authors and Licence
 -------------------
 This plugin was originally made by Mika Tuupola ([@tuupola][@tuupola]).
 
-Since then, Matt Pegler ([@pegler][@pegler]) has pitched in, as I 
+Since then, Matt Pegler ([@pegler][@pegler]) has pitched in, as I
 ([@joallard][@joallard]).
 
 It is subject to the [MIT Licence][MIT].

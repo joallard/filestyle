@@ -17,7 +17,7 @@
         /* TODO: This should not override CSS. */
         var settings = {
             buttonText: 'Choose File',
-            buttonClass: "fileButton",
+            buttonClass: "file-button",
             tabIndex: false,
             fileSelected: function(filename){}
         };
@@ -32,7 +32,7 @@
 
             input = $(this);
 
-            var outerWrapper = $("<div>").addClass('filestyle');
+            var outerWrapper = $("<div>").addClass('filestyle container');
             var buttonClass = input.data('button-class') || settings.buttonClass;
             var buttonText = input.data('button-text') || settings.buttonText;
 
@@ -55,6 +55,7 @@
                                 "position": "relative",
                                 "overflow": "hidden",
                                 "text-align": "center",
+                                "display": "inline-block",
                 });
             }
 
@@ -67,7 +68,7 @@
                              .attr('tabIndex', 999)
                              .css({
                                  "display": "inline",
-                             }).addClass('fileName');
+                             }).addClass('file-name');
 
             $(self).wrap(outerWrapper);
             $(self).wrap(button);
@@ -97,5 +98,9 @@
 
 
     };
+
+    $(document).ready(function(){
+        $("input.filestyle[type=file]").filestyle()
+    })
 
 })(jQuery);
