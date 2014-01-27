@@ -1,5 +1,5 @@
 /* Style File - jQuery plugin for styling file input elements
- *  
+ *
  * Copyright (c) 2007-2009 Mika Tuupola
  *
  * Licensed under the MIT license:
@@ -11,9 +11,9 @@
  */
 
 (function($) {
-    
+
     $.fn.filestyle = function(options) {
-                
+
         /* TODO: This should not override CSS. */
         var settings = {
             buttonText: 'Choose File',
@@ -21,27 +21,27 @@
             tabIndex: false,
             fileSelected: function(filename){}
         };
-                
+
         if(options) {
             $.extend(settings, options);
         };
-                        
+
         return this.each(function() {
-            
+
             var self = this;
-            
+
             input = $(this);
-            
+
             var outerWrapper = $("<div>").addClass('filestyle');
             var buttonClass = input.data('button-class') || settings.buttonClass;
             var buttonText = input.data('button-text') || settings.buttonText;
 
             var button = $("<div>").css({
-            	"position": "relative"
+                "position": "relative"
             }).addClass(buttonClass);
 
             if (settings.image) {
-            	button.css({
+                button.css({
                                 "width": settings.width + "px",
                                 "height": settings.height + "px",
                                 "background": "url(" + settings.image + ") 0 0 no-repeat",
@@ -59,7 +59,7 @@
             }
 
             if (settings.tabIndex != false) {
-                button.attr('tabIndex', settings.tabIndex)   
+                button.attr('tabIndex', settings.tabIndex)
             }
 
             var filename = $('<input class="file" READONLY/>')
@@ -69,9 +69,9 @@
                                  "display": "inline",
                              }).addClass('fileName');
 
-			$(self).wrap(outerWrapper);
-			$(self).wrap(button);
-			$(self).parent().parent().prepend(filename);
+            $(self).wrap(outerWrapper);
+            $(self).wrap(button);
+            $(self).parent().parent().prepend(filename);
 
             $(self).css({
                         "position": "absolute",
@@ -85,17 +85,17 @@
                     });
 
             $(self).bind("change", function() {
-            	v = $(self).val();
-            	if (v.indexOf('C:\\fakepath\\') == 0)
-            		v = v.substring(12);
+              v = $(self).val();
+              if (v.indexOf('C:\\fakepath\\') == 0)
+                v = v.substring(12);
                 filename.val(v);
 
                 settings.fileSelected(v);
             });
-      
+
         });
-        
+
 
     };
-    
+
 })(jQuery);
